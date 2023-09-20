@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
   <meta charset="UTF-8" />
@@ -22,7 +22,7 @@
         },
       }
   </script>
-  <title>LaraGigs | Find Laravel Jobs & Projects</title>
+  <title>{{ $title ?? 'Page Title' }}</title>
 </head>
 
 <body class="mb-48">
@@ -58,7 +58,7 @@
   </nav>
 
   <main>
-    {{$slot}}
+    @yield('content')
   </main>
   <footer
     class="fixed bottom-0 left-0 w-full flex items-center justify-start font-bold bg-laravel text-white h-24 mt-24 opacity-90 md:justify-center">

@@ -1,4 +1,5 @@
-<x-layout>
+@extends('layouts.app')
+@section('content')
   @if (!Auth::check())
     @include('partials._hero')
   @endif
@@ -22,4 +23,4 @@
   <div class="mt-6 p-4">
     {{$listings->links()}}
   </div>
-</x-layout>
+@endsection

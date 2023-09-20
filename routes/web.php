@@ -21,13 +21,13 @@ Route::get('/', [ListingController::class, 'index']);
 
 
 
-//show create listing Form
+//show and create listing Form
 Route::get('/listings/create', [ListingController::class, 'create'])
   ->middleware('auth');
 
 //store a listing data
-Route::post('/listings', [ListingController::class, 'store'])
-  ->middleware('auth');
+// Route::post('/listings', [ListingController::class, 'store'])
+//   ->middleware('auth');
 
 Route::get('/listings/manage', [ListingController::class, 'manage'])
   ->middleware('auth');
@@ -37,12 +37,12 @@ Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 //show edit listing Form
-Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->middleware('auth');
 
 
 //update a listing data
-Route::put('/listings/{listing}', [ListingController::class, 'update'])
-  ->middleware('auth');
+// Route::put('/listings/{listing}', [ListingController::class, 'update'])
+//   ->middleware('auth');
 
 //delete a listing
 Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])
@@ -54,9 +54,6 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])
 Route::get('/register', [UserController::class, 'create'])
   ->middleware('guest');
 
-//store user data
-Route::post('/users', [UserController::class, 'store'])
-  ->middleware('guest');
 
 //logout
 Route::post('/logout', [UserController::class, 'logout'])
