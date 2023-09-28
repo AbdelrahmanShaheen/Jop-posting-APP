@@ -2,6 +2,9 @@
 
 ![image](https://github.com/AbdelrahmanShaheen/Linux-Commands/assets/77184432/11600e81-37f2-424a-bab4-5b6c5553c105)
 
+## About
+A powerful platform designed to streamline your job search and hiring process. Whether you're a job seeker looking for the perfect opportunity or an employer searching for top talent.
+
 ## Features
 
 -   Filter job post by tag
